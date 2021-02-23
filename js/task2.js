@@ -6,24 +6,34 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+
 const ingredientsRef = document.querySelector('#ingredients');
 
-const listOfItem = ingredients.map(element => {
+const listOfItem = array => {
+    array.map(element => {
     const tagsRef = document.createElement('li');
     tagsRef.textContent = element;
     ingredientsRef.append(tagsRef);
 })
+}
 
 
-
-// for (let ingridient of ingredients) {
+// const listOfItem = array => {
+//     for (let item of array) {
 //     const tagsRef = document.createElement('li');
-//     tagsRef.textContent = ingridient;
+//     tagsRef.textContent = item;
 //     ingredientsRef.appendChild(tagsRef);
 // }
+// }
 
-// for (let i = 0; i < ingredients.length; i++) {
+
+// const listOfItem = array => {
+//     for (let i = 0; i < array.length; i++) {
 //     const tagsRef = document.createElement('li');
-//     tagsRef.textContent = ingredients[i];
+//     tagsRef.textContent = array[i];
 //     ingredientsRef.appendChild(tagsRef);
 // }
+// }
+
+
+listOfItem(ingredients);

@@ -1,5 +1,5 @@
 const fontSizeControl = document.querySelector('input#font-size-control');
-console.log(fontSizeControl.value);
+// console.log(fontSizeControl.value);
 const inputText = document.querySelector('span#text');
 
 

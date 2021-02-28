@@ -9,31 +9,14 @@ const ingredients = [
 
 const ingredientsRef = document.querySelector('#ingredients');
 
-const listOfItem = array => {
-    array.map(element => {
-    const tagsRef = document.createElement('li');
-    tagsRef.textContent = element;
-    ingredientsRef.append(tagsRef);
-})
+const listOfItem = (array, parent) => {
+  const list = array.map(element => {
+    let tagList = document.createElement('li')
+    tagList.textContent = element;
+    return tagList;
+  })
+
+  parent.append(...list);
 }
 
-
-// const listOfItem = array => {
-//     for (let item of array) {
-//     const tagsRef = document.createElement('li');
-//     tagsRef.textContent = item;
-//     ingredientsRef.appendChild(tagsRef);
-// }
-// }
-
-
-// const listOfItem = array => {
-//     for (let i = 0; i < array.length; i++) {
-//     const tagsRef = document.createElement('li');
-//     tagsRef.textContent = array[i];
-//     ingredientsRef.appendChild(tagsRef);
-// }
-// }
-
-
-listOfItem(ingredients);
+listOfItem(ingredients,ingredientsRef);

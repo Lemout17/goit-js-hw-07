@@ -14,16 +14,5 @@ const onIncrementBtnClick = () => {
     counterValue.textContent = currentCount;
 }
 
-
-// const onDecrementBtnClick = () => {
-//     counterValue.textContent -= 1;
-// }
-
-// const onIncrementBtnClick = () => {
-//     counterValue.textContent = +(counterValue.textContent) + 1;
-
-// }
-
-
 decrementBtn.addEventListener('click', onDecrementBtnClick);
 incrementBtn.addEventListener('click', onIncrementBtnClick);
